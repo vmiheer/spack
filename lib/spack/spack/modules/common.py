@@ -40,6 +40,7 @@ import llnl.util.filesystem
 from llnl.util.lang import dedupe
 import llnl.util.tty as tty
 import spack.build_environment as build_environment
+import spack.environment as ev
 import spack.error
 import spack.paths
 import spack.schema.environment
