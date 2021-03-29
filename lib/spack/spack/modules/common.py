@@ -222,7 +222,7 @@ def root_path(name, module_set_name):
     # For backwards compatibility, read the old module roots for default set
     if module_set_name == 'default':
         roots = spack.config.merge_yaml(
-            roots, spack.config.get('config:module_roots', {}))
+            spack.config.get('config:module_roots', {}), roots)
     path = roots.get(name, os.path.join(spack.paths.share_path, name))
     return spack.util.path.canonicalize_path(path)
 
